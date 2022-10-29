@@ -1,0 +1,21 @@
+<?php
+$objConnect=mysqli_connect("localhost","root","")or die("can't connect to database");
+$db = mysqli_select_db($objConnect, "DBProduct");
+mysqli_query($objConnect, "SET NAMES utf8");
+
+
+
+$sql_update="UPDATE promotion
+SET promotionId='$_GET[promotionId]',promotionName='$_GET[promotionName]',CDate='$_GET[CDate]',ModDate='$_GET[ModDate]'
+ WHERE promotionId='$_GET[promotionId]' ";
+
+$result= mysqli_query( $objConnect, $sql_update);
+
+if(!$result) {
+echo "Can't Update!!!<br>";
+} else {
+echo "Success <br>";
+echo "<br>";
+echo "<a href='promotion.php'>กลับสู่หน้าหลัก</a>";
+}
+?>

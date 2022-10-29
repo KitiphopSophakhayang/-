@@ -1,0 +1,7 @@
+table, th,td{                          /* table, th,td พวกนี้คือจากหน้า tables.html เอามาใส่สี */
+    border: 1px gray;               /* พื้นหลัง */
+    background-color: burlywood;    
+    border: solid;
+}
+
+
